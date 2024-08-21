@@ -53,6 +53,12 @@ func getWeather(c *gin.Context) {
 		})
 		return
 	}
+	if len(gridPoints.Properties.Periods) == 0 {
+		c.JSON(http.StatusNotFound, gin.H{
+			"error": "Failed to get forecast data from NWS",
+		})
+		return
+	}
 
 	// Return native data
 	characterizeTemperature := func(temperature int) string {
