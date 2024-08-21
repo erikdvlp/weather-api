@@ -1,40 +1,40 @@
 package nws
 
 type GridPoints struct {
-	Context  []any  `json:"@context"`
-	Type     string `json:"type"`
+	Context  []any  `json:"-"`
+	Type     string `json:"-"`
 	Geometry struct {
-		Type        string        `json:"type"`
-		Coordinates [][][]float64 `json:"coordinates"`
-	} `json:"geometry"`
+		Type        string        `json:"-"`
+		Coordinates [][][]float64 `json:"-"`
+	} `json:"-"`
 	Properties struct {
-		Units             string `json:"units"`
-		ForecastGenerator string `json:"forecastGenerator"`
-		GeneratedAt       string `json:"generatedAt"`
-		UpdateTime        string `json:"updateTime"`
-		ValidTimes        string `json:"validTimes"`
+		Units             string `json:"-"`
+		ForecastGenerator string `json:"-"`
+		GeneratedAt       string `json:"-"`
+		UpdateTime        string `json:"-"`
+		ValidTimes        string `json:"-"`
 		Elevation         struct {
-			UnitCode string  `json:"unitCode"`
-			Value    float64 `json:"value"`
-		} `json:"elevation"`
+			UnitCode string  `json:"-"`
+			Value    float64 `json:"-"`
+		} `json:"-"`
 		Periods []struct {
-			Number                     int    `json:"number"`
-			Name                       string `json:"name"`
-			StartTime                  string `json:"startTime"`
-			EndTime                    string `json:"endTime"`
-			IsDaytime                  bool   `json:"isDaytime"`
+			Number                     int    `json:"-"`
+			Name                       string `json:"-"`
+			StartTime                  string `json:"-"`
+			EndTime                    string `json:"-"`
+			IsDaytime                  bool   `json:"-"`
 			Temperature                int    `json:"temperature"`
-			TemperatureUnit            string `json:"temperatureUnit"`
-			TemperatureTrend           string `json:"temperatureTrend"`
+			TemperatureUnit            string `json:"-"`
+			TemperatureTrend           string `json:"-"`
 			ProbabilityOfPrecipitation struct {
-				UnitCode string `json:"unitCode"`
-				Value    any    `json:"value"`
-			} `json:"probabilityOfPrecipitation"`
-			WindSpeed        string `json:"windSpeed"`
-			WindDirection    string `json:"windDirection"`
-			Icon             string `json:"icon"`
+				UnitCode string `json:"-"`
+				Value    any    `json:"-"`
+			} `json:"-"`
+			WindSpeed        string `json:"-"`
+			WindDirection    string `json:"-"`
+			Icon             string `json:"-"`
 			ShortForecast    string `json:"shortForecast"`
-			DetailedForecast string `json:"detailedForecast"`
+			DetailedForecast string `json:"-"`
 		} `json:"periods"`
 	} `json:"properties"`
 }

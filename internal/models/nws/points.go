@@ -1,48 +1,48 @@
 package nws
 
 type Points struct {
-	Context  []any  `json:"@context"`
-	ID       string `json:"id"`
-	Type     string `json:"type"`
+	Context  []any  `json:"-"`
+	ID       string `json:"-"`
+	Type     string `json:"-"`
 	Geometry struct {
-		Type        string    `json:"type"`
-		Coordinates []float64 `json:"coordinates"`
-	} `json:"geometry"`
+		Type        string    `json:"-"`
+		Coordinates []float64 `json:"-"`
+	} `json:"-"`
 	Properties struct {
-		ID                  string `json:"@id"`
-		Type                string `json:"@type"`
-		Cwa                 string `json:"cwa"`
-		ForecastOffice      string `json:"forecastOffice"`
+		ID                  string `json:"-"`
+		Type                string `json:"-"`
+		Cwa                 string `json:"-"`
+		ForecastOffice      string `json:"-"`
 		GridID              string `json:"gridId"`
 		GridX               int    `json:"gridX"`
 		GridY               int    `json:"gridY"`
-		Forecast            string `json:"forecast"`
-		ForecastHourly      string `json:"forecastHourly"`
-		ForecastGridData    string `json:"forecastGridData"`
-		ObservationStations string `json:"observationStations"`
+		Forecast            string `json:"-"`
+		ForecastHourly      string `json:"-"`
+		ForecastGridData    string `json:"-"`
+		ObservationStations string `json:"-"`
 		RelativeLocation    struct {
-			Type     string `json:"type"`
+			Type     string `json:"-"`
 			Geometry struct {
-				Type        string    `json:"type"`
-				Coordinates []float64 `json:"coordinates"`
-			} `json:"geometry"`
+				Type        string    `json:"-"`
+				Coordinates []float64 `json:"-"`
+			} `json:"-"`
 			Properties struct {
-				City     string `json:"city"`
-				State    string `json:"state"`
+				City     string `json:"-"`
+				State    string `json:"-"`
 				Distance struct {
-					UnitCode string  `json:"unitCode"`
-					Value    float64 `json:"value"`
-				} `json:"distance"`
+					UnitCode string  `json:"-"`
+					Value    float64 `json:"-"`
+				} `json:"-"`
 				Bearing struct {
-					UnitCode string `json:"unitCode"`
-					Value    int    `json:"value"`
-				} `json:"bearing"`
-			} `json:"properties"`
-		} `json:"relativeLocation"`
-		ForecastZone    string `json:"forecastZone"`
-		County          string `json:"county"`
-		FireWeatherZone string `json:"fireWeatherZone"`
-		TimeZone        string `json:"timeZone"`
-		RadarStation    string `json:"radarStation"`
+					UnitCode string `json:"-"`
+					Value    int    `json:"-"`
+				} `json:"-"`
+			} `json:"-"`
+		} `json:"-"`
+		ForecastZone    string `json:"-"`
+		County          string `json:"-"`
+		FireWeatherZone string `json:"-"`
+		TimeZone        string `json:"-"`
+		RadarStation    string `json:"-"`
 	} `json:"properties"`
 }
